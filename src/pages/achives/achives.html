@@ -1,0 +1,43 @@
+<!--meta content="text/html;charset=UTF-8" http-equiv="Content-Type" /-->
+<ion-header  lang="ar">
+  <ion-navbar>
+      <ion-title>
+         تفاصيل الانجازات
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content lang="ar" class="bg-light">
+  <ion-row style="border-bottom: groove;">
+    <ion-col col-3>
+    <ion-label >الدائرة</ion-label>
+  </ion-col>
+  <ion-col col-3>
+    <ion-label >المنجز</ion-label>
+  </ion-col>
+    <ion-col col-3>
+    <ion-label >المتبقي</ion-label>
+  </ion-col>
+  <ion-col col-3>
+    <ion-label >السبب</ion-label>
+  </ion-col>
+</ion-row>
+<div *ngFor="let ach of data">
+  <ion-row style="border-bottom: groove;">
+    <ion-col col-3>
+    <ion-label >{{ach.circule}}</ion-label>
+  </ion-col>
+  <ion-col col-3>
+    <ion-label >{{ach.done}}</ion-label>
+  </ion-col>
+    <ion-col col-3>
+    <ion-label >{{ach.remain}}</ion-label>
+  </ion-col>
+  <ion-col col-3>
+    <ion-label >{{ach.reason}}</ion-label>
+  </ion-col>
+  </ion-row>
+</div>
+
+
+</ion-content>

@@ -1,0 +1,91 @@
+<!--meta content="text/html;charset=UTF-8" http-equiv="Content-Type" /-->
+<ion-header  lang="ar">
+  <ion-navbar>
+      <ion-title text-right>
+        انجاز طلبات الاجراء
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  text-right lang="ar" >
+  <ion-row style="border-bottom: groove;color: blanchedalmond;font-weight: bold;">
+    <ion-col col-3>
+      <ion-label >السبب</ion-label>
+    </ion-col>
+    <ion-col col-3>
+      <ion-label >المتبقي</ion-label>
+    </ion-col>
+  <ion-col col-3>
+    <ion-label >المنجز</ion-label>
+  </ion-col>
+  
+  <ion-col col-3>
+    <ion-label >اليوم/الدائرة</ion-label>
+  </ion-col>
+</ion-row>
+<div *ngFor="let num of data;index as day">
+  <ion-card>
+    <ion-item>
+      <ion-icon name="add"  (click)="add_achieve(day)" item-left></ion-icon>
+  
+        </ion-item>
+    <ion-card-title padding>{{days[day]}} </ion-card-title>
+
+
+    <div *ngFor="let arch of num">
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-4>
+        <ion-input type="tel" placeholder="السبب" [(ngModel)]="arch.reason" ></ion-input>
+  
+      </ion-col>
+      <ion-col col-2>
+        <ion-input type="tel" placeholder="المتبقى" [(ngModel)]="arch.remain" ></ion-input>
+
+    </ion-col>
+    <ion-col col-2>
+      <ion-input type="tel" placeholder="المنجز" [(ngModel)]="arch.done" ></ion-input>
+    </ion-col>
+     
+    <ion-col col-4>
+      <ion-select style="max-width: 100% !important;"  placeholder='الدائرة' [(ngModel)]="arch.circule"  color="light" interface="action-sheet"   name='selectedColor'>
+         
+        <ion-option *ngFor="let circule of circules;let i=index" value={{circule.id}} selected="i===0">{{circule.name}}</ion-option>
+
+      </ion-select>
+</ion-col>
+  </ion-row>
+</div>
+<div *ngFor="let arch of new_achieves[day]">
+  <ion-row style="border-bottom: groove;">
+    <ion-col col-4>
+      <ion-input type="tel" placeholder="السبب" [(ngModel)]="arch.reason" ></ion-input>
+  
+  </ion-col>
+  <ion-col col-2>
+    <ion-input type="tel" placeholder="المتبقى" [(ngModel)]="arch.remain" ></ion-input>
+
+</ion-col>
+  <ion-col col-2>
+    <ion-input type="tel" placeholder="المنجز" [(ngModel)]="arch.done" ></ion-input>
+ 
+ 
+  </ion-col>
+  <ion-col col-4>
+    <ion-select style="max-width: 100% !important;"  placeholder='الدائرة' [(ngModel)]="arch.circule"  color="light" interface="action-sheet"   name='selectedColor'>
+       
+      <ion-option *ngFor="let circule of circules;let i=index" value={{circule.id}} selected="i===0">{{circule.name}}</ion-option>
+
+    </ion-select>
+</ion-col>
+</ion-row>
+</div>
+  </ion-card>
+  
+</div>
+
+
+</ion-content>
+<ion-footer>
+  <button full large round *ngIf="canEdit==false" ion-button  [disabled]="true">لا يمكن التحديث</button>
+  <button full large round *ngIf="canEdit==true" style="font-weight: bolder;"  ion-button (click)="upload()" >تحديث</button>
+</ion-footer>

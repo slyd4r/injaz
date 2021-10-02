@@ -1,0 +1,53 @@
+<!--meta content="text/html;charset=UTF-8" http-equiv="Content-Type" /-->
+<ion-header  lang="ar">
+  <ion-navbar>
+      <ion-title>
+          الانجازات
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content lang="ar" class="bg-light">
+
+  <div class="">
+    <ion-row style="border-bottom: groove;">
+      <ion-col col-4>
+        <ion-label >
+          اجمالي المتبقي  : {{remain}}</ion-label>
+      </ion-col>
+    <ion-col col-4>
+      <ion-label >
+        اجمالي المنجز : {{done}}</ion-label>
+    </ion-col>
+  <ion-col col-4>
+    <ion-label style="text-align: center;">الايام</ion-label>
+</ion-col>
+  </ion-row>
+   
+      <ion-list *ngFor ='let day of days ; index as i'>
+        <div (click)="go_day(i)">
+          <ion-item >
+            
+        <ion-col size="12">
+          <span float-right>
+            {{day.name}}
+          </span>
+        </ion-col>
+            
+        <ion-col size="12">
+          <span>
+            المنجز : {{day.done}}
+          </span>
+        </ion-col>
+        <ion-col size="12">
+          <span>
+            المتبقي  : {{day.remain}}
+          </span>
+        </ion-col>
+              <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+          </ion-item>
+        </div>
+      </ion-list>
+  </div>
+
+</ion-content>

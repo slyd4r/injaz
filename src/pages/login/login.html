@@ -1,0 +1,50 @@
+<!--
+  Generated template for the AddUsersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center style="color: rgb(245, 245, 245);font-weight: bold;" >تسجيل الدخول</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="animated fadeIn login auth-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center" size-md="6" size-lg="5" size-xs="12">
+        <h1 text-center style="color: rgb(233, 233, 233);font-weight: bold;padding-bottom: 90px;">انجاز طلبات اجراء</h1>
+        <form [formGroup]="register" (ngSubmit)="login()">
+        
+
+          <ion-card color="light" class="auth-card ion-margin">
+            <ion-item color="light">
+              <ion-input text-right type="tel" placeholder="رقم السجل المدني" formControlName="number"></ion-input>
+            </ion-item>
+          
+          </ion-card>
+
+          <button ion-button
+            block  
+            class="ion-margin-start ion-margin-end ion-margin-bottom"
+            type="submit" style="border-radius: 10px;"
+            [disabled]="!register.valid"
+          >
+          تسجيل الدخول
+          </button>
+          <span class="ion-margin"></span>
+         <ion-row style="padding-top: 90px;">
+           <ion-col size="12">
+             <h4 text-center  style="color: rgb(228, 228, 228);font-weight: bold;" >باسمة أحمد علي الشهري </h4>
+             <h4 text-center  style="color: rgb(221, 221, 221);font-weight: bold;" >bashehrei@moj.gov.sa </h4>
+          </ion-col>
+         </ion-row>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

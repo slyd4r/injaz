@@ -1,0 +1,52 @@
+
+<ion-content  class="auth-page" >
+  <div class="login-content">
+
+    <!-- Logo -->
+   
+    <div padding text-center>
+      <h2 ion-text >
+        حسابي
+      </h2>
+    </div>
+<div >
+    
+    <ion-col>
+      <ion-row>
+        <ion-label class="padd-right">
+          {{' '}}{{userProvider.username}} : اسم المستخدم
+          </ion-label>
+       
+    </ion-row>
+    <ion-row text-right>
+        <ion-label class="padd-right">
+          {{' '}}{{name}} : الاسم
+          </ion-label>
+       
+    </ion-row>
+    </ion-col>
+  </div>
+      <br/>
+    <div margin-top>
+        
+            <div>
+                <ion-input placeholder="{{userProvider.address}}"  #addressInput [(ngModel)]="address"  type="text" name="address"></ion-input>
+               
+                <button  ion-button icon-start round full  style="background-color: rgb(209, 234, 248);color: black"  tappable (click)="contact()">
+                  <ion-icon name="save"></ion-icon>
+          للتواصل
+          </button>
+                  <button  ion-button icon-start round full  style="background-color: rgb(248, 212, 245);color: black"  tappable (click)="logout()">
+                      <ion-icon name="save"></ion-icon>
+               تسجيل الخروج
+              </button>
+        
+                </div>
+    </div>
+
+    <!-- Other links -->
+
+
+    <div style="padding-bottom: 56px;"></div>
+  </div>
+</ion-content>

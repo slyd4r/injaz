@@ -1,0 +1,10 @@
+<ion-tabs selectedIndex='0'>
+  <ion-tab [root]="homePage" tabTitle="Home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="accountPage" tabTitle="account" tabIcon="person"></ion-tab>
+</ion-tabs>
+<ion-tabs *ngIf="userProvider.username != null && userProvider.username !=''" selectedIndex='0'>
+  <ion-tab [root]="homePage" tabTitle="Home" tabIcon="home"></ion-tab>
+  <ion-tab [root]="favourite" tabTitle="favourite" tabIcon="heart"></ion-tab>
+  <ion-tab [root]="my_msgs" tabTitle="my messages" tabIcon="brush"></ion-tab>
+  <ion-tab [root]="accountPage" tabTitle="account" tabIcon="person"></ion-tab>
+</ion-tabs>

@@ -1,0 +1,37 @@
+page-account {
+  .div{
+    text-align: right;
+    float: right;
+  }
+  .ion-label{
+    text-align: right;
+    float:left;
+  }
+  .borderIn{
+    border: solid 1px black;
+  }
+    .ion-item{
+        padding: 0.2px;margin: 5px;margin: 2px;
+       background:  rgb(199, 199, 199);
+       
+    }
+    ion-input {
+        color: #00aa88;
+        background-color:white;
+        border-radius: 500px;
+        margin: 0 0 25px 0;
+      }
+
+
+      ion-label {
+        color: color($colors, light);
+        margin: 0;
+      }
+    
+}.padd-right{
+  font-weight: bold;
+  color: black;
+  float: right;
+  text-align: right;
+}
+ 

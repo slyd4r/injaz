@@ -1,0 +1,46 @@
+<!-- -->
+<ion-content class="auth-page">
+    <div class="login-content">
+  
+      <!-- Logo -->
+      <div  text-center>
+        <div class="logo"></div>
+        <h2 ion-text class="text-primary">
+          <strong>ايجابية</strong>
+        </h2>
+      </div>
+      <form class="list-form">
+        <ion-item>
+          
+          <ion-input class="right" placeholder="الاسم" #unserNameInput [(ngModel)]="name" type="text" name="name"></ion-input>
+        </ion-item>
+        <ion-item>
+          
+          <ion-input class="right" placeholder="اسم المستخدم" #unserNameInput [(ngModel)]="username" type="text" name="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  placeholder="كلمة المرور" #passwordInput  [(ngModel)]="password" type="password" name="password"></ion-input>
+        </ion-item>
+        
+      </form>
+      <ion-item>
+        <button ion-button full clear (click)="privacy_policy()"> بالمتابعة فأنت توافق على سياسات و شروط التطبيق </button>
+      </ion-item>
+      <div margin-top>
+              <div>
+                  <button ion-button icon-start block color="dark" tappable (click)="register()">
+                    <ion-icon name="log-in"></ion-icon>
+                  تسجيل
+                  </button>
+          
+                  </div>
+      </div>
+  
+      <!-- Other links -->
+
+  
+    </div>
+    
+    <div style="padding-bottom: 107px;"></div>
+  </ion-content>
+  <ion-footer></ion-footer>

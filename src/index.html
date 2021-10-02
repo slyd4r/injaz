@@ -15,6 +15,9 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
+  <link href="build/main.css" rel="stylesheet">
+   
+  <link href="https://unpkg.com/leaflet@1.1.0/dist/leaflet.css" rel="stylesheet"> 
   <!-- cordova.js required for cordova apps -->
   <script src="cordova.js"></script>
 
@@ -26,8 +29,6 @@
         .catch(err => console.error('Error', err));
     }
   </script>-->
-
-  <link href="build/main.css" rel="stylesheet">
 
 </head>
 <body>
@@ -44,6 +45,18 @@
 
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
-
+<style type="text/css">
+    body {
+      overflow: hidden;
+      min-width: 320px;
+      max-width: auto;
+    }
+    html {
+      overflow: hidden;
+      min-width: 320px;
+      max-width: auto;
+      min-height: 568px;
+    }
+  </style>
 </body>
 </html>

@@ -1,13 +1,30 @@
 {
-  "name": "Ionic",
-  "short_name": "Ionic",
-  "start_url": "index.html",
-  "display": "standalone",
-  "icons": [{
-    "src": "assets/imgs/logo.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }],
-  "background_color": "#4e8ef7",
-  "theme_color": "#4e8ef7"
-}
+  "name": "MyApp",
+  "version": "1.0",
+  "manifest_version":2,
+  "homepage_url": "https://www.myapp.com",
+  "description": "My Awesome App",
+  "icons": {
+   "16": "assets/icon/favicon.ico",
+   "32": "assets/icon/favicon.ico"
+  },
+  "background": {
+   "scripts": [
+    "assets/js/background.js"
+   ],
+   "persistent": false
+  },
+  "browser_action": {
+   "default_icon": {
+    "16": "assets/icon/favicon.ico.png",
+    "32": "assets/icon/favicon.ico"
+   },
+   "default_title": "MyApp",
+   "default_popup": "index.html"
+  },
+  "permissions": [
+   "notifications",
+   "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://connect.facebook.net https://www.googletagmanager.com https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'"
+ }
